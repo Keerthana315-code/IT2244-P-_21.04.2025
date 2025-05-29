@@ -1,0 +1,278 @@
+  
+5.enter 2 numbers 
+ 7  5
+ 7 is greater than 5
+ 9  5
+ 5 is less than 9
+
+echo "Enter the first number: "
+read num1
+echo "Enter the second number: "
+read num2
+
+if ["$num1" -gt "$num2"]; then
+	echo "$num1 is greater than $num2"
+elif ["$num1" -lt "$num2"]; then
+	echo "$num1 is less than $num2"
+else
+	echo "$num1 is equal to $num2"
+fi
+
+ 
+
+6. enter user name
+		mino
+	user name is correct/ incorrect
+
+
+
+actual_username=$(Jathusika)
+echo "Enter username: "
+read input_username
+
+if [$input_username" == "actual_username"]; then
+	echo "Username is correct"
+else
+	echo "User name is incorrect"
+fi
+
+
+7. create simple calculator using "expr" command same as the question 3
+
+
+#!/bin/bash
+
+# Simple calculator using expr command
+
+# Ask the user to enter the first number
+echo "Enter the first number:"
+read num1
+
+# Ask the user to enter the operator
+echo "Enter the operator (+, -, *, /):"
+read operator
+
+# Ask the user to enter the second number
+echo "Enter the second number:"
+read num2
+
+# Perform the calculation using the expr command
+case "$operator" in
+    "+")
+        result=$(expr $num1 + $num2)
+        ;;
+    "-")
+        result=$(expr $num1 - $num2)
+        ;;
+    "*")
+        result=$(expr $num1 \* $num2)
+        ;;
+    "/")
+        # Check for division by zero
+        if [ $num2 -eq 0 ]; then
+            echo "Error: Division by zero is not allowed."
+            exit 1
+        else
+            result=$(expr $num1 / $num2)
+        fi
+        ;;
+    *)
+        echo "Invalid operator. Please use one of the following: +, -, *, /"
+        exit 1
+        ;;
+esac
+
+# Display the result
+echo "Result: $result"
+
+
+chmod +x simple_calculator.sh
+
+
+./simple_calculator.sh
+
+
+
+
+1)
+write a code for small astrology based on your life path number for that get date of birth from user then calculate life path number(switchh case)
+
+calculation:-
+date=23
+	a=date%10   2
+	b=date/10   3
+	c=a+b       5
+
+if life path number:
+	1:Lucky
+	2:Carefully do your work
+	3:Storger
+	4:Happy
+	5:Can get help
+	6:Doubt
+	7:Sad
+	8:Like
+	9:Courage
+	
+	
+echo "Enter your date of birth: "
+read dob
+$a=$((dob%10))   
+$b=$((dob/10))   
+$c=$(($a+$b))   
+case $c in
+1)
+echo "Lucky"
+;;
+2)
+echo "Carefully do your work"
+;;
+3)
+echo "Storger"
+;;
+4)
+echo "Happy"
+;;
+5)
+echo "Can get help"
+;;
+6)
+echo "Doubt"
+;;
+7)
+echo "Sad"
+;;
+8)
+echo "Like"
+;;
+9)
+echo "Courage"
+;;
+
+
+
+2)
+Give list of numbers then calculate the summation and multiplication using for loop
+
+1 2 3 4 5
+ summation = 15
+ multiplication = 120
+ 
+ for variable in list
+	do 
+	commands
+ done
+ 
+ 
+ 
+ 
+
+
+echo "How many numbers do you want to enter: "
+read n
+sum=0
+for 1 in range(5)
+	do
+	echo "Enter number :"
+	read num
+	$sum=$(($sum+$num))
+	done 
+	
+echo $sum
+	
+	
+	
+3)
+print the integers from 1 to 10 using while loop
+
+while [condition]
+ do 
+	commands
+done
+
+let i=1
+while [$i -le 10]
+do
+echo $i
+i=$(($i+1))
+done
+
+4)
+print below pattern using nested loop
+column=7, rows=7
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
+* * * * * * *
+
+for((i=1;i<=7;i++))
+do
+for((j=0;j<i;j++))
+do
+echo -n "*"
+done
+echo ""
+done
+
+* * * * * * * *
+* * * * * * *
+* * * *  * *
+* * * * *
+* * * *
+* * *
+* *
+*
+
+for((i=1;i<=7;i++))
+do
+for((j=7;j>i;j--))
+do
+echo -n "*"
+done
+echo ""
+done
+
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+6 6 6 6 6 6
+
+for((i=1;i<=6; i++))
+do
+for((j=1; j<=i; j++))
+echo -n "$j"
+done
+echo ""
+done
+
+1
+1 2
+1 2 3
+1 2 3 4 
+1 2 3 4 5 
+1 2 3 4 5 6
+
+			*
+		   * *
+		  * * *
+		 * * * * 
+		* * * * *
+
+syntax for nested for loop
+
+for((variable=0; variable<=input; variable+))
+	do
+		for((variable=0; variable<=input; variable+))
+			do
+			
+			
+			
+
+
+echo ""
+
